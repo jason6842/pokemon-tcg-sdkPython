@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pokemon Cards</title>
+</head>
+<body>
+    <h1>Pokemon Cards</h1>
+    <div>
+        {% for card in cards %}
+            <div style="margin-bottom: 20px;">
+                <h3>{{ card.name }}</h3>
+                <p>Price: ${{ card.prices }}</p>
+                <p>Set: {{ card.pokemon_set }}</p>
+                <p>Series: {{ card.pokemon_series }} </p>
+                <img src="{{ card.image_url }}" alt="Pokemon Card Image" style="width:200px;">
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
